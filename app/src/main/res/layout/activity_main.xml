@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.cyrilpillai.android_job_helper.MainActivity">
+    tools:context="com.cyrilpillai.android_job_helper.main_screen.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
