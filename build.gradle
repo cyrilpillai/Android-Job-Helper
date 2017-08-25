@@ -1,0 +1,42 @@
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0-beta2'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+ext {
+    appId = 'com.cyrilpillai.android_job_helper'
+    minSdkVersion = 16
+    targetSdkVersion = 26
+    compileSdkVersion = 26
+    buildToolsVersion = '26.0.1'
+    sourceCompatibilityVersion = JavaVersion.VERSION_1_7
+    targetCompatibilityVersion = JavaVersion.VERSION_1_7
+}
+
+def supportLibraryVersion = '26.0.1'
+
+ext.deps = [
+        javaAnnotation: "javax.annotation:javax.annotation-api:1.2",
+        appCompat     : "com.android.support:appcompat-v7:$supportLibraryVersion",
+        recyclerview  : "com.android.support:recyclerview-v7:$supportLibraryVersion",
+        designSupport : "com.android.support:design:$supportLibraryVersion",
+        evernoteJobs  : "com.evernote:android-job:1.1.11",
+        javapoet      : "com.squareup:javapoet:1.0.0"
+]
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
